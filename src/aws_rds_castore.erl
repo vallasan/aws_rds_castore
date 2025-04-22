@@ -7,7 +7,7 @@
 
 %% Returns the path to the AWS RDS CA certificate store PEM file.
 file_path() ->
-    PrivDir = code:lib_dir(aws_rds_castore, priv),
+    PrivDir = code:priv_dir(aws_rds_castore),
     list_to_binary(filename:join(PrivDir, "global-bundle.pem")).
 
 %% Returns a set of `:ssl` transport options for certificate verification.
